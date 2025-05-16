@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 async function getData(id : string) {
   const res = await fetch(`https://dummyjson.com/recipes/${id}`, {
@@ -18,7 +19,7 @@ export default async function Page( {
     const recipe = await getData(id);
     return (
         <>
-      <img src={recipe.image} alt={recipe.name} className="w-full h-64 object-cover rounded-lg" />
+      <Image src={recipe.image} alt={recipe.name} className="w-full h-64 object-cover rounded-lg" />
 
       <div className="text-gray-700">
         <p><strong>Cuisine:</strong> {recipe.cuisine}</p>
