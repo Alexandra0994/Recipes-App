@@ -1,6 +1,7 @@
 'use client'
 
 import { Recipe } from '@/types/types'
+import Image from 'next/image'
 import Link from 'next/link'
 
 interface RecipeCardProps {
@@ -10,7 +11,7 @@ interface RecipeCardProps {
 export default function Card({ recipe }: RecipeCardProps) {
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition w-full max-w-sm">
-      <img src={recipe.image} alt={recipe.name} className="w-full h-48 object-cover" />
+      <Image src={recipe.image} alt={recipe.name} className="w-full h-48 object-cover" />
 
       <div className="p-4 space-y-2">
         <h2 className="text-lg font-semibold">{recipe.name}</h2>

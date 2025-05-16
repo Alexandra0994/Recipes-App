@@ -35,7 +35,7 @@ export default async function Page( {
        <section>
         <h2 className="text-xl font-semibold mb-2">Ingredients</h2>
         <ul className="list-disc list-inside space-y-1">
-          {recipe.ingredients.map((ingredient:any) => (
+          {recipe.ingredients.map((ingredient: string) => (
             <li key={ingredient}>{ingredient}</li>
           ))}
         </ul>
@@ -44,7 +44,7 @@ export default async function Page( {
       <section>
         <h2 className="text-xl font-semibold mb-2">Instructions</h2>
         <ol className="list-decimal list-inside space-y-2">
-          {recipe.instructions.map((instruction:any) => (
+          {recipe.instructions.map((instruction:string) => (
             <li key={instruction}>{instruction}</li>
           ))}
         </ol>

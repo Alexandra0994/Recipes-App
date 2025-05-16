@@ -16,7 +16,7 @@ export default async function RecipesPage() {
   return (
   <>
   <ul>
-    {recipes.map((recipe:any) => (
+    {recipes.map((recipe:Recipe) => (
           <RecipeCard key={recipe.id} recipe={recipe} />
     ))}</ul></>
   );
